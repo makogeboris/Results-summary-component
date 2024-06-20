@@ -8,8 +8,8 @@ fetch(url)
   .then((data) => {
     addData(data);
   })
-  .catch((error) => {
-    console.error("Error fetching data:", error);
+  .catch((err) => {
+    summary.innerHTML = `Error fetching data: ${err.message}`;
   });
 
 function addData(data) {
